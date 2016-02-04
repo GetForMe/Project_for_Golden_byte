@@ -27,5 +27,7 @@
 *.out
 *.app
 
-Debug/
+
+**/x64
+**/Debug
 *.sdf
