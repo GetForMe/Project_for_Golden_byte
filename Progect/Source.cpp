@@ -8,7 +8,7 @@ void main()
 
 	try
 	{
-		/*AllegroView all;
+		/*AllegroCore all;
 		all.Initialize(600, 400, 0, 2);*/
 	}
 }

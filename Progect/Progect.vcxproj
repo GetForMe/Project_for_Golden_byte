@@ -148,10 +148,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AllegroView.h" />
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="AllegroCore.h" />
+    <ClInclude Include="AllegroHeader.h" />
+    <ClInclude Include="BaseView.h" />
+    <ClInclude Include="CoreEnumeration.h" />
+    <ClInclude Include="MainMenuVeiw.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AllegroHeader.cpp" />
+    <ClCompile Include="BaseView.cpp" />
+    <ClCompile Include="MainMenuView.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
