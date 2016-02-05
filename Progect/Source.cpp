@@ -1,14 +1,19 @@
 #include "Header.h"
-using namespace std;
-
+#include "AllegroCore.h"
 void main()
 {
-	cout << " If you can read this message, that mean what i do all right $) " << endl;
-	cout << " second chans";
-
-	try
-	{
-		/*AllegroCore all;
-		all.Initialize(600, 400, 0, 2);*/
+	try {
+		AllegroCore Tennis;
+		Tennis.Initialize(800, 400);
+		Tennis.StartGame();
+		
 	}
+	catch (char *messenge) {
+		cout << messenge << endl;
+	}
+	
+
+
+	system("pause");
+
 }

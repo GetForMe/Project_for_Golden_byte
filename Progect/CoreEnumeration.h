@@ -1,5 +1,5 @@
 #pragma once
-enum class Color {
+enum class Color{
 	black,
 	DarkBlue,
 	DarkGreen,
@@ -19,7 +19,7 @@ enum class Color {
 };
 
 
-enum class Direction {
+enum class Direction{
 	Note,
 	Up,
 	Right,
@@ -32,4 +32,12 @@ enum class ShipType
 	Fighter,
 	Cruiser,
 	Linkor
+};
+
+enum class ViewType
+{
+	MainMenu,
+	SettingsMenu,
+	GameView
+
 };

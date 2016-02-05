@@ -75,7 +75,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <Allegro_AddonImage>true</Allegro_AddonImage>
-    <Allegro_LibraryType>StaticMonolithRelease</Allegro_LibraryType>
+    <Allegro_LibraryType>DynamicDebug</Allegro_LibraryType>
+    <Allegro_AddonTTF>true</Allegro_AddonTTF>
+    <Allegro_AddonFont>true</Allegro_AddonFont>
+    <Allegro_AddonColor>true</Allegro_AddonColor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -148,20 +151,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AllegroCore.cpp" />
+    <ClCompile Include="BaseView.cpp" />
+    <ClCompile Include="DifficultMenuView.cpp" />
+    <ClCompile Include="MainMenuView.cpp" />
+    <ClCompile Include="SettingsMenuView.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="AllegroCore.h" />
     <ClInclude Include="AllegroHeader.h" />
     <ClInclude Include="BaseView.h" />
     <ClInclude Include="CoreEnumeration.h" />
-    <ClInclude Include="MainMenuVeiw.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AllegroHeader.cpp" />
-    <ClCompile Include="BaseView.cpp" />
-    <ClCompile Include="MainMenuView.cpp" />
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="DifficultMenuView.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="MainMenuView.h" />
+    <ClInclude Include="SettingsMenuView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

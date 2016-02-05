@@ -21,37 +21,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseView.h">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AllegroCore.cpp">
       <Filter>View\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuVeiw.h">
-      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseView.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultMenuView.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuView.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsMenuView.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AllegroCore.h">
+      <Filter>View\Core</Filter>
     </ClInclude>
     <ClInclude Include="AllegroHeader.h">
       <Filter>View\Core</Filter>
     </ClInclude>
-    <ClInclude Include="AllegroCore.h">
+    <ClInclude Include="BaseView.h">
       <Filter>View\Core</Filter>
     </ClInclude>
     <ClInclude Include="CoreEnumeration.h">
       <Filter>View\Core</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseView.cpp">
+    <ClInclude Include="DifficultMenuView.h">
       <Filter>View\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="MainMenuView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AllegroHeader.cpp">
+    </ClInclude>
+    <ClInclude Include="Header.h">
       <Filter>View\Core</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    </ClInclude>
+    <ClInclude Include="MainMenuView.h">
+      <Filter>View\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsMenuView.h">
+      <Filter>View\Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,11 +1,5 @@
 #pragma once
-#include <allegro5/allegro.h>
+#include "allegro5/allegro.h"
 #include "allegro5/allegro_image.h"
-
-class AllegroHeader
-{
-public:
-	AllegroHeader();
-	~AllegroHeader();
-};
-
+#include "allegro5/allegro_font.h"
+#include "allegro5/allegro_ttf.h"

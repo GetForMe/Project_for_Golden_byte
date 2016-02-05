@@ -4,11 +4,12 @@
 class BaseView
 {
 protected:
+	int width;
+	int height;
 	ALLEGRO_BITMAP *backgroundImage;
-	ALLEGRO_FONT* mainFont;
-
+	ALLEGRO_FONT *mainFont;
 public:
-	BaseView(ALLEGO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont);
+	BaseView(int width, int height, ALLEGRO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont);
 	virtual void Update() = 0;
 };
 
