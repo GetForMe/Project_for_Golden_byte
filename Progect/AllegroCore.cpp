@@ -47,8 +47,9 @@ void AllegroCore::Initialize(int wight, int height) {
 		throw "TTF init  error!";
 	}
 
-	backgroundImage = al_load_bitmap("Resources/Images/spaceBackground.jpg");
-	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 25, 0);
+	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg");
+	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0);
+	setingsFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 35, 0);
 
 	if (backgroundImage == nullptr) {
 		throw "Load image error!";
@@ -60,7 +61,7 @@ void AllegroCore::Initialize(int wight, int height) {
 	al_register_event_source(eventQueue, al_get_display_event_source(display));
 	al_register_event_source(eventQueue, al_get_keyboard_event_source());
 
-	currentView = new MainMenuView(wight, height, backgroundImage, mainFont);
+	currentView = new MainMenuView(wight, height, backgroundImage, mainFont, setingsFont);
 }
 
 void AllegroCore::StartGame() {

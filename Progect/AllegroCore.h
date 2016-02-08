@@ -12,6 +12,7 @@ class AllegroCore
 
 	ALLEGRO_BITMAP *backgroundImage;
 	ALLEGRO_FONT *mainFont;
+	ALLEGRO_FONT *setingsFont;
 
 	BaseView* currentView;
 	
