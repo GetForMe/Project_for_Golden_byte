@@ -19,6 +19,13 @@ void MainMenuView::Update()
 
 }
 
+ViewType MainMenuView::CheckForSwitchMenu(int x, int y)
+{
+	//if ()return ViewType::SettingsMenu;
+
+	return ViewType::MainMenu;
+}
+
 MainMenuView::~MainMenuView()
 {
 
