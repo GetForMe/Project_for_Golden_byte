@@ -78,7 +78,8 @@ void AllegroCore::Initialize(int wight, int height) {
 
 }
 
-void AllegroCore::StartGame() {
+void AllegroCore::StartGame() 
+{
 
 	al_start_timer(timer);
 	ALLEGRO_EVENT ev;
@@ -86,11 +87,12 @@ void AllegroCore::StartGame() {
 	while (true) {
 		al_wait_for_event(eventQueue, &ev);
 
+		//currentView->processEvent(ev);         // TO DO!!!!
+
 		//al_get_mouse_state(&state);
 
-		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueue)) {
-			
-					
+		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueue)) 
+		{				
 			currentView->Update();
 
 			al_flip_display();

@@ -6,6 +6,12 @@ MainMenuView::MainMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImag
 
 }
 
+//void MainMenuView::ProcessEvent(ALLEGRO_EVENT* ev)              //TO DO!!!!
+//{
+//	// Управление, проверка события: "нужно ли его обрабатывать"
+//	currentController->SetDirection(currentController->GetDirection(ev));
+//}
+
 void MainMenuView::Update()
 {
 	al_draw_bitmap(backgroundImage, 0, 0, 0);

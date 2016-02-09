@@ -3,7 +3,7 @@
 #include "Header.h"
 #include "MainMenuView.h"
 #include "SettingsMenuView.h"
-#include"CoreEnumeration.h"
+#include "CoreEnumeration.h"
 
 class AllegroCore
 {
@@ -27,7 +27,6 @@ class AllegroCore
 
 	int wight;
 	int height;
-	 
 	int fpsTimeOut;
 
 public:

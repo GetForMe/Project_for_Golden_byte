@@ -157,6 +157,7 @@
     <ClCompile Include="AllegroCore.cpp" />
     <ClCompile Include="BaseView.cpp" />
     <ClCompile Include="DifficultMenuView.cpp" />
+    <ClCompile Include="GameView.cpp" />
     <ClCompile Include="MainMenuView.cpp" />
     <ClCompile Include="SettingsMenuView.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="BaseView.h" />
     <ClInclude Include="CoreEnumeration.h" />
     <ClInclude Include="DifficultMenuView.h" />
+    <ClInclude Include="GameView.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="MainMenuView.h" />
     <ClInclude Include="SettingsMenuView.h" />

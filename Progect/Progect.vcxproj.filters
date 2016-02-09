@@ -42,6 +42,9 @@
     <ClCompile Include="Source.cpp">
       <Filter>View\Core</Filter>
     </ClCompile>
+    <ClCompile Include="GameView.cpp">
+      <Filter>View\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AllegroCore.h">
@@ -66,6 +69,9 @@
       <Filter>View\Core</Filter>
     </ClInclude>
     <ClInclude Include="SettingsMenuView.h">
+      <Filter>View\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameView.h">
       <Filter>View\Core</Filter>
     </ClInclude>
   </ItemGroup>
