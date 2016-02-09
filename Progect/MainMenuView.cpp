@@ -6,6 +6,12 @@ MainMenuView::MainMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImag
 
 }
 
+//void MainMenuView::ProcessEvent(ALLEGRO_EVENT* ev)              //TO DO!!!!
+//{
+//	// Управление, проверка события: "нужно ли его обрабатывать"
+//	currentController->SetDirection(currentController->GetDirection(ev));
+//}
+
 void MainMenuView::Update()
 {
 	al_draw_bitmap(backgroundImage, 0, 0, 0);
@@ -21,8 +27,10 @@ void MainMenuView::Update()
 
 ViewType MainMenuView::CheckForSwitchMenu(int x, int y)
 {
-	//if ()return ViewType::SettingsMenu;
-
+	if (x >=55 && x<=202 && y>=250 && y<=275)
+	{
+		return ViewType::SettingsMenu;
+	}
 	return ViewType::MainMenu;
 }
 
