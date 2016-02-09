@@ -27,15 +27,18 @@ void AllegroCore::Initialize(int wight, int height) {
 	display = al_create_display(wight, height);
 	
 
-	if (display == nullptr) {
+	if (display == nullptr)
+	{
 		throw "Display creating error!";
 	}
 
-	if (!al_install_keyboard()) {
+	if (!al_install_keyboard()) // Подключение клавиатуры
+	{
 		throw "Instal keyboard error!";
 	}
 
-	if (!al_install_mouse()) {
+	if (!al_install_mouse()) // Подключение мыши как и вверху
+	{
 		throw "Instal mouse error!";
 	}
 	timer = al_create_timer(1.0 / fpsTimeOut);
@@ -56,6 +59,9 @@ void AllegroCore::Initialize(int wight, int height) {
 	}
 
 	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg");
+	// TO DO Создать "backgroundImage" для Settinge  &&&&
+	//settingsBackgroundImage = al_load_bitmap("Resources/Images/SettingsMenu.jpg");
+	
 	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0);
 	setingsFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 35, 0);
 
@@ -72,7 +78,7 @@ void AllegroCore::Initialize(int wight, int height) {
 
 
 	views[(int)ViewType::MainMenu] = new MainMenuView(wight, height, backgroundImage, mainFont, setingsFont);
-	//views[(int)ViewType::SettingsMenu] = new SettingsMenuView(wight, height, backgroundImage, mainFont, setingsFont);
+	views[(int)ViewType::SettingsMenu] = new SettingsMenuView(wight, height, backgroundImage, mainFont, setingsFont);
 
 	currentView = views[(int)ViewType::MainMenu];
 
@@ -89,8 +95,6 @@ void AllegroCore::StartGame()
 
 		//currentView->processEvent(ev);         // TO DO!!!!
 
-		//al_get_mouse_state(&state);
-
 		if (ev.type == ALLEGRO_EVENT_TIMER && al_is_event_queue_empty(eventQueue)) 
 		{				
 			currentView->Update();
@@ -100,14 +104,13 @@ void AllegroCore::StartGame()
 
 		if (ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
 		{
-		//	printf("Mouse position (%d, %d)\n", state.x, state.y);
-		cout<<" x:"<< ev.mouse.x << " y:" << ev.mouse.y;
+		cout<<" x: "<< ev.mouse.x << " y: " << ev.mouse.y<<endl;
 
 			ViewType menu =	currentView->CheckForSwitchMenu(ev.mouse.x, ev.mouse.y);
 			currentView = views[(int)menu];
 		}
 
-		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)	{
 			break;
 		}
 	}
