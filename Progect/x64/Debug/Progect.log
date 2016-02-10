@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Source.cpp
   SettingsMenuView.cpp
   MainMenuView.cpp
@@ -6,3 +7,24 @@
   Generating Code...
   LINK : C:\Users\Feniks\Documents\Project_for_Golden_byte\x64\Debug\Progect.exe not found or not built by the last incremental link; performing full link
   Progect.vcxproj -> C:\Users\Feniks\Documents\Project_for_Golden_byte\x64\Debug\Progect.exe
+=======
+﻿Build started 10.02.2016 20:49:46.
+     1>Project "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\Progect\Progect.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\include\ /IC:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\AllegroDeps.1.4.0.0\build\native\\include\ /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Source.cpp
+         Source.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\x64\Debug\Progect.exe" /INCREMENTAL /NOLOGO "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro-debug.lib" "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro_main-debug.lib" "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro_image-debug.lib" "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro_color-debug.lib" "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro_font-debug.lib" "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\packages\Allegro.5.1.13.0\build\native\v140\x64\lib\allegro_ttf-debug.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\x64\Debug\Progect.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\x64\Debug\Progect.lib" /MACHINE:X64 x64\Debug\AllegroCore.obj
+         x64\Debug\BaseView.obj
+         x64\Debug\DifficultMenuView.obj
+         x64\Debug\GameView.obj
+         x64\Debug\MainMenuView.obj
+         x64\Debug\SettingsMenuView.obj
+         x64\Debug\Source.obj
+         Progect.vcxproj -> C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\x64\Debug\Progect.exe
+     1>Done Building Project "C:\Users\26158\Documents\Repositoriy\GoldenByte\Source\Progect\Progect.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.22
+>>>>>>> f684cd908db65b5df0ae67228106f0162b23567b

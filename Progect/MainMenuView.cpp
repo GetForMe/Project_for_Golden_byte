@@ -1,7 +1,7 @@
 #include "MainMenuView.h"
 
-MainMenuView::MainMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont, ALLEGRO_FONT *setingsFont)
-	:BaseView(width, height, backgroundImage, mainFont, setingsFont)
+MainMenuView::MainMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont, ALLEGRO_FONT *setingsFont, ALLEGRO_BITMAP *settingsfon)
+	:BaseView(width, height, backgroundImage, mainFont, setingsFont, settingsfon)
 {
 
 }
@@ -30,6 +30,11 @@ ViewType MainMenuView::CheckForSwitchMenu(int x, int y)
 	if (x >=55 && x<=202 && y>=250 && y<=275)
 	{
 		return ViewType::SettingsMenu;
+	}
+
+	if (x >=83 && x <= 175 && y >=350 && y <= 375)
+	{
+		return ViewType::Exit;
 	}
 	return ViewType::MainMenu;
 }

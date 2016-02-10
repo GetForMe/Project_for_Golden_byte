@@ -4,7 +4,7 @@ void main()
 {
 	try {
 		AllegroCore Tennis;
-		Tennis.Initialize(640, 423);
+		Tennis.Initialize(600, 800);
 		Tennis.StartGame();
 		
 	}

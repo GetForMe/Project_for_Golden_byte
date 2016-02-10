@@ -58,12 +58,11 @@ void AllegroCore::Initialize(int wight, int height) {
 		throw "TTF init  error!";
 	}
 
-	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg");
-	// TO DO Создать "backgroundImage" для Settinge  &&&&
-	//settingsBackgroundImage = al_load_bitmap("Resources/Images/SettingsMenu.jpg");
+	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg"); // Картинка фона главного меню
+	settingsfon = al_load_bitmap("Resources/Images/settingsfon.jpeg"); // Картинка фона меню настроек
 	
-	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0);
-	setingsFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 35, 0);
+	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0); // Шрифт Названия игры(Главный)
+	setingsFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 35, 0); // Шрифт надписей меню
 
 	if (backgroundImage == nullptr) {
 		throw "Load image error!";
@@ -77,8 +76,8 @@ void AllegroCore::Initialize(int wight, int height) {
 	al_register_event_source(eventQueue, al_get_mouse_event_source());
 
 
-	views[(int)ViewType::MainMenu] = new MainMenuView(wight, height, backgroundImage, mainFont, setingsFont);
-	views[(int)ViewType::SettingsMenu] = new SettingsMenuView(wight, height, backgroundImage, mainFont, setingsFont);
+	views[(int)ViewType::MainMenu] = new MainMenuView(wight, height, backgroundImage, mainFont, setingsFont, settingsfon);
+	views[(int)ViewType::SettingsMenu] = new SettingsMenuView(wight, height, backgroundImage, mainFont, setingsFont, settingsfon);
 
 	currentView = views[(int)ViewType::MainMenu];
 
@@ -107,7 +106,14 @@ void AllegroCore::StartGame()
 		cout<<" x: "<< ev.mouse.x << " y: " << ev.mouse.y<<endl;
 
 			ViewType menu =	currentView->CheckForSwitchMenu(ev.mouse.x, ev.mouse.y);
+			if (menu == ViewType::Exit) break;
 			currentView = views[(int)menu];
+
+
+		//currentView = views[(int)currentView->CheckForSwitchMenu(ev.mouse.x, ev.mouse.y)];
+		//currentView->Update();
+		al_flip_display();
+
 		}
 
 		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)	{
