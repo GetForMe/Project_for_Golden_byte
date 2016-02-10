@@ -2,8 +2,8 @@
 
 
 
-DifficultMenuView::DifficultMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont, ALLEGRO_FONT *setingsFont)
-	:BaseView(width, height, backgroundImage, mainFont, setingsFont)
+DifficultMenuView::DifficultMenuView(int width, int height, ALLEGRO_BITMAP *backgroundImage, ALLEGRO_FONT *mainFont, ALLEGRO_FONT *setingsFont, ALLEGRO_BITMAP *settingsfon)
+	:BaseView(width, height, backgroundImage, mainFont, setingsFont, settingsfon)
 {
 
 }

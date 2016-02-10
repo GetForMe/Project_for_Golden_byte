@@ -38,6 +38,6 @@ enum class ViewType
 {
 	MainMenu,
 	SettingsMenu,
-	GameView
-
+	GameView,
+	Exit
 };
