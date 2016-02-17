@@ -12,8 +12,6 @@ void main()
 		cout << messenge << endl;
 	}
 	
-
-
 	system("pause");
 
 }
