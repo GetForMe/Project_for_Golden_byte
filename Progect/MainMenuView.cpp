@@ -27,6 +27,11 @@ void MainMenuView::Update()
 
 ViewType MainMenuView::CheckForSwitchMenu(int x, int y)
 {
+	if (x >= 42 && x <= 198 && y >= 149 && y <= 178)
+	{
+		return ViewType::GameView;
+	}
+
 	if (x >=55 && x<=202 && y>=250 && y<=275)
 	{
 		return ViewType::SettingsMenu;

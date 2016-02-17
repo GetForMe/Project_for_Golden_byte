@@ -4,6 +4,7 @@
 #include "MainMenuView.h"
 #include "SettingsMenuView.h"
 #include "CoreEnumeration.h"
+#include "GameView.h"
 
 class AllegroCore
 {
@@ -11,11 +12,11 @@ class AllegroCore
 	ALLEGRO_TIMER *timer;
 	ALLEGRO_EVENT_QUEUE *eventQueue;
 
-
 	ALLEGRO_BITMAP *backgroundImage;
 	ALLEGRO_FONT *mainFont;
 	ALLEGRO_FONT *setingsFont;
 	ALLEGRO_BITMAP *settingsfon;
+	ALLEGRO_BITMAP *gameViewBackground;
 
 	BaseView* currentView;
 	
