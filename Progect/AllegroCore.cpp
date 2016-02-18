@@ -60,9 +60,12 @@ void AllegroCore::Initialize(int wight, int height) {
 
 	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg"); // Картинка фона главного меню
 	settingsfon = al_load_bitmap("Resources/Images/settingsfon.jpeg"); // Картинка фона меню настроек
-	
+	gameViewBackground = al_load_bitmap("Resources/Images/backGroundGame+Tree.png");
+
 	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0); // Шрифт Названия игры(Главный)
 	setingsFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 35, 0); // Шрифт надписей меню
+
+	
 
 	if (backgroundImage == nullptr) {
 		throw "Load image error!";
@@ -78,6 +81,8 @@ void AllegroCore::Initialize(int wight, int height) {
 
 	views[(int)ViewType::MainMenu] = new MainMenuView(wight, height, backgroundImage, mainFont, setingsFont, settingsfon);
 	views[(int)ViewType::SettingsMenu] = new SettingsMenuView(wight, height, backgroundImage, mainFont, setingsFont, settingsfon);
+
+	views[(int)ViewType::GameView] = new GameView(wight, height, gameViewBackground, mainFont, setingsFont, settingsfon);
 
 	currentView = views[(int)ViewType::MainMenu];
 
@@ -108,12 +113,6 @@ void AllegroCore::StartGame()
 			ViewType menu =	currentView->CheckForSwitchMenu(ev.mouse.x, ev.mouse.y);
 			if (menu == ViewType::Exit) break;
 			currentView = views[(int)menu];
-
-
-		//currentView = views[(int)currentView->CheckForSwitchMenu(ev.mouse.x, ev.mouse.y)];
-		//currentView->Update();
-		al_flip_display();
-
 		}
 
 		if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)	{

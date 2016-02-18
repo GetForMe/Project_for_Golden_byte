@@ -3,9 +3,9 @@
 void main()
 {
 	try {
-		AllegroCore Tennis;
-		Tennis.Initialize(600, 800);
-		Tennis.StartGame();
+		AllegroCore DreamCars;
+		DreamCars.Initialize(600, 800);
+		DreamCars.StartGame();
 		
 	}
 	catch (char *messenge) {
