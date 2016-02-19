@@ -4,7 +4,7 @@
 class GameView : public BaseView
 {
 	int trackX, trackY;
-
+	ALLEGRO_BITMAP *opponentImage;
 	//void processEvent(AEev);
 
 public:
@@ -12,4 +12,6 @@ public:
 	virtual void Update();
 	ViewType CheckForSwitchMenu(int x, int y);
 	~GameView();
+
+
 };

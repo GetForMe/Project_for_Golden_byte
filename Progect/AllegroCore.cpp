@@ -58,8 +58,8 @@ void AllegroCore::Initialize(int wight, int height) {
 		throw "TTF init  error!";
 	}
 
-	backgroundImage = al_load_bitmap("Resources/Images/Menu.jpg"); // Картинка фона главного меню
-	settingsfon = al_load_bitmap("Resources/Images/settingsfon.jpeg"); // Картинка фона меню настроек
+	backgroundImage = al_load_bitmap("Resources/Images/Menu.png"); // Картинка фона главного меню
+	settingsfon = al_load_bitmap("Resources/Images/settingsfon.png"); // Картинка фона меню настроек
 	gameViewBackground = al_load_bitmap("Resources/Images/backGroundGame+Tree.png");
 
 	mainFont = al_load_font("Resources/Fonts/RosewoodStd-Regular.otf", 50, 0); // Шрифт Названия игры(Главный)
